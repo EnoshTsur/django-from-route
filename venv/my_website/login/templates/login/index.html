@@ -1,0 +1,23 @@
+{% extends 'router/index.html' %}
+
+{% block body %}
+
+
+<form action="{% url 'login:submit' %}" method="POST">
+
+{% csrf_token %}
+
+    <input type="text" name="name" 
+    id="name" placeholder="Name">
+
+    <input type="password" name="password" 
+    id="password" placeholder="Password">
+    
+    <button type="submit">Submit</button>
+
+</form>
+{% endblock body %}
+
+
+
+
